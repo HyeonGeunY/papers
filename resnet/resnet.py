@@ -75,6 +75,7 @@ class ResNet(nn.Module):
         self.bn1 = nn.BatchNorm2d(channels[0])
         self.act1 = nn.ReLU()
         self.maxpool1 = nn.MaxPool2d(kernel_size=3)
+        # self.maxpool1 = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
         self.bottleneck = bottleneck
         
         self.layers = []
